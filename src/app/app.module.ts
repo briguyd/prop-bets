@@ -9,13 +9,15 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { CheckboxQuestionComponent } from './questions/checkbox-question/checkbox-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropSheetComponent,
     QuestionComponent,
-    OverUnderQuestionComponent
+    OverUnderQuestionComponent,
+    CheckboxQuestionComponent
   ],
   imports: [
     BrowserModule,

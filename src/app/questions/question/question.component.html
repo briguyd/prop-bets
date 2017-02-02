@@ -2,6 +2,7 @@
   <label [attr.for]="question.key">{{question.label}}</label>
   <div [ngSwitch]="question.controlType">
     <app-over-under-question *ngSwitchCase="'over-under'" [form]="form" [question]="question"></app-over-under-question>
+    <app-checkbox-question *ngSwitchCase="'checkbox'" [form]="form" [question]="question"></app-checkbox-question>
   </div> 
-  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+  <!--<div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>-->
 </div>

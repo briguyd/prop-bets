@@ -1,3 +1,4 @@
+import { CheckboxQuestion } from './checkbox-question/checkbox-question';
 import { OverUnderQuestion } from './over-under-question/over-under-question';
 import { Injectable } from '@angular/core';
 import { QuestionBase } from './question-base';
@@ -20,6 +21,12 @@ export class QuestionService {
         required: true,
         order: 2,
         median: 2.5
+      }),
+      new CheckboxQuestion({
+        key: 'singerForgetsWord',
+        label: 'Anthem singer forgets/omits at least one word',
+        required: true,
+        order: 3
       })
     ];
     return questions.sort((a, b) => a.order - b.order);
