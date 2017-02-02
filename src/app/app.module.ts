@@ -1,16 +1,24 @@
+import { QuestionService } from './questions/question.service';
+import { OverUnderQuestionComponent } from './questions/over-under-question/over-under-question.component';
+import { QuestionComponent } from './questions/question/question.component';
+import { PropSheetComponent } from './prop-sheet/prop-sheet.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PropSheetComponent,
+    QuestionComponent,
+    OverUnderQuestionComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpModule
   ],
