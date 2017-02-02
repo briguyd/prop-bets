@@ -1,4 +1,4 @@
 <h1>
   {{title}}
 </h1>
-<app-prop-sheet [questions]="questions"></app-prop-sheet>
+<app-prop-sheet *ngIf="questions" [questions]="questions"></app-prop-sheet>

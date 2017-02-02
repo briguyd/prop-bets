@@ -1,0 +1,27 @@
+{
+  "questions": [
+    {
+      "type": "over-under",
+      "key": "finalScore",
+      "label": "Final score",
+      "required": true,
+      "order": 1,
+      "median": 45.5
+    },
+    {
+      "type": "over-under",
+      "key": "interceptions",
+      "label": "Total interceptions",
+      "required": true,
+      "order": 2,
+      "median": 2.5
+    },
+    {
+      "type": "checkbox",
+      "key": "singerForgetsWord",
+      "label": "Anthem singer forgets/omits at least one word",
+      "required": true,
+      "order": 3
+    }
+  ]
+}

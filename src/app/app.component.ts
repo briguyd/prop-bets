@@ -12,6 +12,6 @@ export class AppComponent {
   questions: any[];
 
   constructor(service: QuestionService) {
-    this.questions = service.getQuestions();
+    service.getAll().subscribe(questions => this.questions = questions);
   }
 }

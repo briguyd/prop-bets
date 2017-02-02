@@ -10,11 +10,12 @@ import { QuestionControlService } from '../questions/question-control.service';
 export class PropSheetComponent implements OnInit {
 
   @Input() questions: QuestionBase<any>[] = [];
-  
+
   form: FormGroup;
   payLoad = '';
   constructor(private qcs: QuestionControlService) { }
   ngOnInit() {
+    console.log(this.questions);
     this.form = this.qcs.toFormGroup(this.questions);
   }
   onSubmit() {
