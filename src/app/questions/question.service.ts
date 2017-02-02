@@ -13,7 +13,7 @@ export class QuestionService {
         value: 'Bombasto',
         required: true,
         order: 1,
-        options: ['opt1', 'opt2']
+        median: 1.5
       }),
       new OverUnderQuestion({
         key: 'lastName',
@@ -21,7 +21,7 @@ export class QuestionService {
         value: 'LN1234',
         required: true,
         order: 2,
-        options: ['optA', 'optB']
+        median: 12.5
       })
     ];
     return questions.sort((a, b) => a.order - b.order);
