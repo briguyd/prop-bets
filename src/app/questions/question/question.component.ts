@@ -12,7 +12,5 @@ export class QuestionComponent implements OnInit {
   @Input() form: FormGroup;
   get isValid() { return this.form.controls[this.question.key].valid; }
 
-  ngOnInit() {
-    console.log(this.question);
-  }
+  ngOnInit() {}
 }

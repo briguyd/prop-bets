@@ -1,1 +1,7 @@
-{{question.median}}
+<div [formGroup]="form">
+  {{question.label}} {{question.median}}
+  <md-radio-group [formControlName]="question.key">
+    <md-radio-button value="over">Over</md-radio-button>
+    <md-radio-button value="under">Under</md-radio-button>
+  </md-radio-group>
+</div>

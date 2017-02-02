@@ -1,6 +1,6 @@
 import { QuestionBase } from '../question-base';
 
-export class OverUnderQuestion extends QuestionBase<number> {
+export class OverUnderQuestion extends QuestionBase<string> {
   controlType = 'over-under';
   median: number;
 

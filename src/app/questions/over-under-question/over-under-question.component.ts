@@ -13,7 +13,6 @@ export class OverUnderQuestionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
