@@ -9,13 +9,22 @@ export class QuestionControlService {
 
   toFormGroup(questions: QuestionBase<any>[]) {
     const group: any = {};
-
+    const fg = new FormGroup(group);
     if (questions) {
       questions.forEach(question => {
-        group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
+        const fc = question.required ? new FormControl(question.value || '', Validators.required)
           : new FormControl(question.value || '');
+        if (fg.contains(question.group)) {
+          (<FormGroup>fg.get(question.group)).addControl(question.key, fc);
+        } else {
+          fg.addControl(question.group, new FormGroup({ [question.key]: fc}));
+        }
       });
     }
-    return new FormGroup(group);
+
+    console.log(fg);
+    return fg;
   }
+
+
 }
